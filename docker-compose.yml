@@ -1,0 +1,36 @@
+DocManagerData:
+   image: ubuntu
+   volumes:
+     - "/tmp/DOCManager"
+     - "/tmp/DOCManager/temp"
+
+DocManagerServer:
+   image: inta/docmanagerserver
+   links:
+     - "haproxy:haproxy"
+   volumes:
+     - "/usr/local/src/DockerImages/libs:/opt/DOCManagerServer/lib"
+   volumes_from:
+     - DocManagerData
+   ports:
+     - "1099:1099"
+     - "1234:1234"
+
+haproxy:
+   image: inta/haproxy
+   links:
+     - "libreoffice:libreoffice"
+   volumes:
+     - /etc/haproxy/haproxy.cfg:/etc/haproxy/haproxy.cfg
+   ports:
+     - "8997:8997"
+     - "1936:1936"
+
+libreoffice:
+   image: inta/libreoffice
+   environment:
+     - TCP_PORTS=8997
+   expose:
+     - "8997"
+   volumes_from:
+     - DocManagerData
