@@ -1,7 +1,7 @@
-# DockerImages 
+# DockerImages
 ## Construccion de la imagen jantoniogc/libreoffice
 
-1) Descargar el proyecto “DockerImages” del CVS.
+1) Descargar el proyecto “DockerImages”.
 2) Ubicarse en la carpeta “jantoniogc-libreoffice”
 3) Construir la imagen:
   - $ docker build -t jantoniogc/libreoffice .
