@@ -9,23 +9,19 @@
   - $ docker build -t jantoniogc/libreoffice .
 
 ## Construccion de la imagen jantoniogc/haproxy
-1) Descargar el proyecto “DockerImages” del CVS.
+1) Ubicarse en la carpeta “jantoniogc-haproxy”
 
-2) Ubicarse en la carpeta “jantoniogc-haproxy”
-
-3) Construir la imagen
+2) Construir la imagen
   - $ docker build -t jantoniogc/haproxy .
 
 ## Construccion de la imagen jantoniogc/haproxy
-1) Descargar el proyecto “DockerImages” del CVS.
+1) Ubicarse en la carpeta “inta-haproxy”
 
-2) Ubicarse en la carpeta “inta-haproxy”
-
-3) Construir la imagen
+2) Construir la imagen
 
   - $ docker build -t jantoniogc/haproxy .
 
-4) Crear la carpeta “/etc/haproxy”:
+3) Crear la carpeta “/etc/haproxy”:
   - $ mkdir -p /etc/haproxyCopiar los siguientes ficheros en “/etc/haproxy”:
   - $ cp haproxy.cfg /etc/haproxy
   - $ cp haproxy_default.cfg /etc/haproxy
