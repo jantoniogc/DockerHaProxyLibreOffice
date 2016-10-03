@@ -40,4 +40,4 @@
   Esto crea los conectados y listos para funcionar.
 
 3) Si se desean más instancias (o menos) de LibreOffice, hay que ejecutar:
-  - $ docker-compose scale libreoffice=<N>
+  - $ docker-compose scale libreoffice=?   -   donde ? es el número de contenedores de libreoffice
