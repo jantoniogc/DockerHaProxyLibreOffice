@@ -6,7 +6,7 @@ DocManagerData:
 
 
 haproxy:
-   image: jantoniogc/haproxy
+   image: jantoniogc/docker-haproxy
    links:
      - "libreoffice:libreoffice"
    volumes:
@@ -16,7 +16,7 @@ haproxy:
      - "1936:1936"
 
 libreoffice:
-   image: jantoniogc/libreoffice
+   image: jantoniogc/docker-libreoffice
    environment:
      - TCP_PORTS=8997
    expose:
