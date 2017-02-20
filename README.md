@@ -22,7 +22,8 @@
   - $ docker build -t jantoniogc/haproxy .
 
 3) Crear la carpeta “/etc/haproxy”:
-  - $ mkdir -p /etc/haproxyCopiar los siguientes ficheros en “/etc/haproxy”:
+  - $ mkdir -p /etc/haproxy
+  Copiar los siguientes ficheros en “/etc/haproxy”:
   - $ cp haproxy.cfg /etc/haproxy
   - $ cp haproxy_default.cfg /etc/haproxy
   - $ cp reload.sh /etc/haproxy
